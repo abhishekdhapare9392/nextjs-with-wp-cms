@@ -115,6 +115,10 @@
   height: 1em;
 }
 
+.navbarNav {
+  flex-direction: row-reverse;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
