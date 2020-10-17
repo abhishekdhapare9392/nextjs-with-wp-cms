@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
 function Services({ props }) {
-  const services = props.data.services;
-  console.log(services);
+  const services = props.data.services
+  // console.log(props);
   return (
     <div>
       <section className='section py-5'>
@@ -17,7 +17,6 @@ function Services({ props }) {
           <div className='row'>
             <div className='col-md-3'>
               <div className='card card-body rounded-0 border-0 shadow text-center'>
-                <i class='las la-battery-three-quarters'></i>
                 <i
                   className='fa fa-globe text-primary mb-3'
                   style={{ fontSize: '50px' }}
@@ -26,7 +25,7 @@ function Services({ props }) {
                   {services.service_section.service_one.title}
                 </h4>
                 <p>{services.service_section.service_one.content}</p>
-                <Link href='/services'>
+                <Link href='/services#webDevelopment'>
                   <button className='btn btn-primary shadow-sm'>
                     Read More
                   </button>
@@ -43,7 +42,7 @@ function Services({ props }) {
                   {services.service_section.service_two.title}
                 </h4>
                 <p>{services.service_section.service_two.content}</p>
-                <Link href='/services'>
+                <Link href='/services#mobilitySol'>
                   <button className='btn btn-primary shadow-sm'>
                     Read More
                   </button>
@@ -60,7 +59,7 @@ function Services({ props }) {
                   {services.service_section.service_three.title}
                 </h4>
                 <p>{services.service_section.service_three.content}</p>
-                <Link href='/services'>
+                <Link href='/services#productDev'>
                   <button className='btn btn-primary shadow-sm'>
                     Read More
                   </button>
@@ -77,7 +76,7 @@ function Services({ props }) {
                   {services.service_section.service_four.title}
                 </h4>
                 <p>{services.service_section.service_four.content}</p>
-                <Link href='/services'>
+                <Link href='/services#bankSolution'>
                   <button className='btn btn-primary shadow-sm'>
                     Read More
                   </button>
@@ -94,7 +93,7 @@ function Services({ props }) {
     }
   `}</style>
     </div>
-  );
+  )
 }
 
-export default Services;
+export default Services

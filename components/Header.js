@@ -1,6 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+require('jquery')
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
           rel='stylesheet'
           href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
           integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN'
-          crossorigin='anonymous'
+          crossOrigin='anonymous'
         />
         <style>{`
           a {
@@ -24,15 +25,15 @@ const Header = () => {
         `}</style>
       </Head>
       <div>
-        <nav class='navbar navbar-expand-lg navbar-primary bg-primary'>
-          <div class='container'>
+        <nav className='navbar navbar-expand-lg navbar-primary bg-primary'>
+          <div className='container'>
             <Link href='/'>
-              <a class='navbar-brand text-white' href='#'>
+              <a className='navbar-brand text-white' href='#'>
                 Abhishek Dhapare
               </a>
             </Link>
             <button
-              class='navbar-toggler'
+              className='navbar-toggler'
               type='button'
               data-toggle='collapse'
               data-target='#navbarNav'
@@ -40,40 +41,42 @@ const Header = () => {
               aria-expanded='false'
               aria-label='Toggle navigation'
             >
-              <span class='navbar-toggler-icon'></span>
+              <span className='navbar-toggler-icon'></span>
             </button>
             <div
-              class='collapse navbar-collapse navbar-presense'
+              className='collapse navbar-collapse navbar-presense'
               id='navbarNav'
               style={{ flexDirection: 'row-reverse' }}
             >
-              <ul class='navbar-nav'>
-                <li class='nav-item'>
+              <ul className='navbar-nav'>
+                <li className='nav-item'>
                   <Link href='/'>
-                    <a class='nav-link' href='#'>
+                    <a className='nav-link' href='#'>
                       Home
                     </a>
                   </Link>
                 </li>
-                <li class='nav-item'>
+                <li className='nav-item'>
                   <Link href='/about'>
-                    <a class='nav-link' href='#'>
+                    <a className='nav-link' href='#'>
                       About
                     </a>
                   </Link>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='#'>
-                    Services
-                  </a>
+                <li className='nav-item'>
+                  <Link href='/services'>
+                    <a className='nav-link' href='#'>
+                      Services
+                    </a>
+                  </Link>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='#'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#'>
                     Blog
                   </a>
                 </li>
-                <li class='nav-item'>
-                  <a class='nav-link' href='#'>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#'>
                     Contact
                   </a>
                 </li>
@@ -83,7 +86,7 @@ const Header = () => {
         </nav>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

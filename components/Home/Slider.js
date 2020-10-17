@@ -9,49 +9,55 @@ const Slider = ({ props }) => {
     <div>
       <div
         id='carouselExampleControls'
-        class='carousel slide'
+        className='carousel slide'
         data-ride='carousel'
       >
-        <div class='carousel-inner'>
-          <div class='carousel-item active'>
+        <div className='carousel-inner'>
+          <div className='carousel-item active'>
             <img
               src={slider.first_image.url}
-              class='d-block w-100'
+              className='d-block w-100'
               alt='homePage.first_image_name'
             />
           </div>
-          <div class='carousel-item'>
+          <div className='carousel-item'>
             <img
               src={slider.second_image.url}
-              class='d-block w-100'
+              className='d-block w-100'
               alt='homePage.second_image_name'
             />
           </div>
-          <div class='carousel-item'>
+          <div className='carousel-item'>
             <img
               src={slider.third_image.url}
-              class='d-block w-100'
+              className='d-block w-100'
               alt='homePage.third_image_name'
             />
           </div>
         </div>
         <a
-          class='carousel-control-prev'
+          className='carousel-control-prev'
           href='#carouselExampleControls'
           role='button'
           data-slide='prev'
         >
-          <span class='carousel-control-prev-icon' aria-hidden='true'></span>
-          <span class='sr-only'>Previous</span>
+          <span
+            className='carousel-control-prev-icon'
+            aria-hidden='true'
+          ></span>
+          <span className='sr-only'>Previous</span>
         </a>
         <a
-          class='carousel-control-next'
+          className='carousel-control-next'
           href='#carouselExampleControls'
           role='button'
           data-slide='next'
         >
-          <span class='carousel-control-next-icon' aria-hidden='true'></span>
-          <span class='sr-only'>Next</span>
+          <span
+            className='carousel-control-next-icon'
+            aria-hidden='true'
+          ></span>
+          <span className='sr-only'>Next</span>
         </a>
       </div>
     </div>
