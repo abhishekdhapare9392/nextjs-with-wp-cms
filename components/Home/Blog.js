@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
 function Blog({ props }) {
-  const blog = props.blog;
+  const blog = props.blog
   // console.log(blog);
   return (
     <div>
@@ -30,7 +30,7 @@ function Blog({ props }) {
                     </h4>
                     <p>{post.acf.excerpt.substring(0, 100) + '...'}</p>
                   </div>
-                  <Link href={'/' + post.slug}>
+                  <Link href={`/${post.id}`}>
                     <button className='btn btn-primary rounded-0'>
                       Read More
                     </button>
@@ -42,7 +42,7 @@ function Blog({ props }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Blog;
+export default Blog

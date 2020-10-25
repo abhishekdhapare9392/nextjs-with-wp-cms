@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-var ReactDOMServer = require('react-dom/server');
-var HtmlToReactParser = require('html-to-react').Parser;
+import React, { useState, useEffect } from 'react'
 
 function Contact({ title, subtitle, address, phone, email }) {
   useEffect(() => {
@@ -9,19 +7,19 @@ function Contact({ title, subtitle, address, phone, email }) {
       contactEmail: '',
       subject: '',
       message: '',
-    });
-  }, []);
+    })
+  }, [])
 
   const [contact, setContact] = useState({
     name: '',
     contactEmail: '',
     subject: '',
     message: '',
-  });
+  })
 
-  const { name, contactEmail, subject, message } = contact;
+  const { name, contactEmail, subject, message } = contact
   const onChange = (e) =>
-    setContact({ ...contact, [e.target.name]: e.target.value });
+    setContact({ ...contact, [e.target.name]: e.target.value })
 
   const onSubmit = (e) => {
     if (
@@ -30,25 +28,25 @@ function Contact({ title, subtitle, address, phone, email }) {
       subject === '' ||
       message === ''
     ) {
-      showAlert('Please fill all text', 'alaert alert-danger');
+      showAlert('Please fill all text', 'alaert alert-danger')
     } else {
-      showAlert('Please fill all text', 'alaert alert-danger');
+      showAlert('Please fill all text', 'alaert alert-danger')
     }
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   const showAlert = () => {
-    const div = document.createElement('div');
-    div.className = 'alert alert-danger';
-    div.innerText = 'Please fill all text';
-    document.querySelector('.testinAlert').appendChild(div);
+    const div = document.createElement('div')
+    div.className = 'alert alert-danger'
+    div.innerText = 'Please fill all text'
+    document.querySelector('.testinAlert').appendChild(div)
     setTimeout(() => {
-      const allAlerts = document.querySelectorAll('.alert');
+      const allAlerts = document.querySelectorAll('.alert')
       allAlerts.forEach((alert) => {
-        alert.remove();
-      });
-    }, 5000);
-  };
+        alert.remove()
+      })
+    }, 5000)
+  }
 
   return (
     <div>
@@ -65,7 +63,7 @@ function Contact({ title, subtitle, address, phone, email }) {
               <h3 className='text-primary'>
                 <i className='fa fa-street-view'></i> Address
               </h3>
-              <p>{address}</p>
+              <div dangerouslySetInnerHTML={{ __html: address }}></div>
               <h3 className='text-primary'>
                 <i className='fa fa-mobile'></i> Phone
               </h3>
@@ -149,7 +147,7 @@ function Contact({ title, subtitle, address, phone, email }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

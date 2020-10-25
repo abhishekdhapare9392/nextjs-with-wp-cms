@@ -71,14 +71,18 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#'>
-                    Blog
-                  </a>
+                  <Link href='/blog'>
+                    <a className='nav-link' href='#'>
+                      Blog
+                    </a>
+                  </Link>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#'>
-                    Contact
-                  </a>
+                  <Link href='/contact'>
+                    <a className='nav-link' href='#'>
+                      Contact
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>

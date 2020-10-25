@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Banking = ({ services }) => {
-  //   console.log(services.af)
   const serviceWeb = services.acf.service_group.service_four
   return (
     <section className='section py-3' id='bankSolution'>
